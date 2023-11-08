@@ -1,6 +1,6 @@
 FROM wordpress:6.4.0-apache
 
-RUN apk add --update curl unzip && rm -Rf /var/cache/apk/*
+RUN apt install curl unzip
 RUN curl -o /tmp/wpplugin.zip https://downloads.wordpress.org/plugin/sqlite-integration.1.8.1.zip
 RUN unzip /tmp/wpplugin.zip -d /usr/src/wordpress/wp-content/plugins/
 RUN rm /tmp/wpplugin.zip
