@@ -1,4 +1,4 @@
-FROM wordpress:fpm-alpine
+FROM wordpress:6.4.0-apache
 
 RUN apk add --update curl unzip && rm -Rf /var/cache/apk/*
 RUN curl -o /tmp/wpplugin.zip https://downloads.wordpress.org/plugin/sqlite-integration.1.8.1.zip
