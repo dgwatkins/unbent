@@ -1,4 +1,4 @@
-FROM wordpress:6.4.1-php8.0-apache
+FROM wordpress:6.4.1-php7.4-apache
 
 RUN apt-get update && apt-get -y install unzip
 RUN curl -o /tmp/wpplugin.zip https://downloads.wordpress.org/plugin/sqlite-integration.zip
