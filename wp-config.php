@@ -10,7 +10,7 @@ define('DB_COLLATE', '');
 $table_prefix  = 'wp_';
 
 define('WP_DEBUG', true);
-define('DISALLOW_FILE_EDIT', true);
+#define('DISALLOW_FILE_EDIT', true);
 
 /* That's all, stop editing! Happy blogging. */
 
