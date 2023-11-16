@@ -18,5 +18,7 @@ define('WP_DEBUG', true);
 if ( !defined('ABSPATH') )
     define('ABSPATH', dirname(__FILE__) . '/');
 
+define('PDODIR', ABSPATH . 'wp-content/plugins/sqlite-integration-main/');
+
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
