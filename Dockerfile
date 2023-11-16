@@ -1,10 +1,10 @@
 FROM wordpress:6.4.1-php8.0-apache
 
 RUN apt-get update && apt-get -y install wget unzip
-RUN cd /usr/src/wordpress/wp-content/plugins && wget http://github.com/WordPress/sqlite-database-integration/archive/refs/heads/main.zip
-RUN cd /usr/src/wordpress/wp-content/plugins && unzip main.zip
-RUN rm /usr/src/wordpress/wp-content/plugins/main.zip
-RUN cd /usr/src/wordpress/wp-content/plugins && mv sqlite-integration-main sqlite-integration
+RUN wget -O /tmp/plugin.zip http://github.com/WordPress/sqlite-database-integration/archive/refs/heads/main.zip
+RUN unzip -d /usr/src/wordpress/wp-content/plugins /tmp/plugin.zip
+RUN rm /tmp/plugin.zip
+RUN mv /usr/src/wordpress/wp-content/plugins/sqlite-integration-main /usr/src/wordpress/wp-content/plugins/sqlite-integration
 RUN cp /usr/src/wordpress/wp-content/plugins/sqlite-integration/db.php /usr/src/wordpress/wp-content
 
 COPY wp-config.php /var/www/wp-config.php
