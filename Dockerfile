@@ -4,7 +4,7 @@ RUN apt-get update && apt-get -y install wget unzip
 RUN wget -O /tmp/plugin.zip http://github.com/WordPress/sqlite-database-integration/archive/refs/heads/main.zip
 RUN unzip -d /usr/src/wordpress/wp-content/plugins /tmp/plugin.zip
 RUN rm /tmp/plugin.zip
-RUN mv /usr/src/wordpress/wp-content/plugins/sqlite-integration-main /usr/src/wordpress/wp-content/plugins/sqlite-integration
+RUN mv /usr/src/wordpress/wp-content/plugins/sqlite-database-integration-main /usr/src/wordpress/wp-content/plugins/sqlite-integration
 RUN cp /usr/src/wordpress/wp-content/plugins/sqlite-integration/db.php /usr/src/wordpress/wp-content
 
 COPY wp-config.php /var/www/wp-config.php
