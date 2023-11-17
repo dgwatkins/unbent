@@ -2,6 +2,8 @@
 define('WP_HOME', getenv('WP_HOME'));
 define('WP_SITEURL', getenv('WP_SITEURL'));
 define('FS_METHOD', 'direct');
+define('DB_ENGINE', 'sqlite' );
+
 define('DB_FILE', 'db.db');
 define('DB_DIR', '/var/www/db/');
 define('DB_CHARSET', 'utf8');
