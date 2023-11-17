@@ -9,5 +9,7 @@ RUN cp /var/www/html/wp-content/plugins/sqlite-database-integration/db.copy /var
 
 COPY wp-config.php /var/www/html/wp-config.php
 RUN chown www-data:www-data /var/www/html/wp-config.php
+RUN sqlite3 /var/www/db/db.db
+RUN chown www-data:www-data /var/www/db/db.db
 
 VOLUME ["/var/www/db"]
