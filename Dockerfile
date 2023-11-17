@@ -7,7 +7,7 @@ RUN rm /tmp/plugin.zip
 RUN mv /var/www/html/wp-content/plugins/sqlite-database-integration-main /var/www/html/wp-content/plugins/sqlite-integration
 RUN cp /var/www/html/wp-content/plugins/sqlite-integration/db.copy /var/www/html/wp-content/db.php
 
-COPY wp-config.php /var/www/wp-config.php
-RUN chown www-data:www-data /var/www/wp-config.php
+COPY wp-config.php /var/www/html/wp-config.php
+RUN chown www-data:www-data /var/www/html/wp-config.php
 
 VOLUME ["/var/www/db"]
