@@ -1,6 +1,6 @@
 <?php
 //debug
-echo shell_exec("id && ls -lR /var/www/db");
+echo shell_exec("id && ls -l /var/www");
 
 define('WP_HOME', getenv('WP_HOME'));
 define('WP_SITEURL', getenv('WP_SITEURL'));
