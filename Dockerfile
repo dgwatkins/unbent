@@ -10,4 +10,4 @@ RUN cp /var/www/html/wp-content/plugins/sqlite-database-integration/db.copy /var
 COPY wp-config.php /var/www/html/wp-config.php
 RUN chown -R www-data:www-data /var/www
 
-VOLUME ["/var/www/db"]
+#VOLUME ["/var/www/db"]
