@@ -1,4 +1,7 @@
 <?php
+//debug
+echo shell_exec("ls -lR /var/www/db");
+
 define('WP_HOME', getenv('WP_HOME'));
 define('WP_SITEURL', getenv('WP_SITEURL'));
 define('FS_METHOD', 'direct');
